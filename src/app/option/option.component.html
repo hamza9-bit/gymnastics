@@ -1,0 +1,7 @@
+<div [class.selected]="isSelected" class="option" (click)="selectOption()">
+  <span>{{ option.id }}</span>
+  <div class="image-container">
+    <img [src]="option.image" alt="image" />
+  </div>
+  <span class="value">{{ option.value }}</span>
+</div>

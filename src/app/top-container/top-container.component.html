@@ -1,0 +1,9 @@
+<div class="selection-container">
+  @for (box of boxes$ | async; track box.id){
+  <app-box [box]="box"></app-box>
+  }
+  <div class="total-container">
+    <button (click)="resetBoxes()">Reset</button>
+    <p>Total: {{ totalValue }}</p>
+  </div>
+</div>

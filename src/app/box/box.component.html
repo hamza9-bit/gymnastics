@@ -1,0 +1,15 @@
+<div [class.selected]="box.selected" class="box" (click)="selectBox(box.id)">
+  <span>{{ box.id }}</span>
+  <div class="image-container">
+    @if(box.option?.image){
+    <img [src]="box.option?.image" alt="image" />
+    }@else{
+    <span class="placeholder-text">Select element</span>
+    }
+  </div>
+  @if (box.option?.value){
+  <span>{{ box.option?.value }}</span>
+  }@else{
+  <span class="value reserved">&nbsp;</span>
+  }
+</div>

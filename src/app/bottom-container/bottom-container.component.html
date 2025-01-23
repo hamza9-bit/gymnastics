@@ -1,0 +1,7 @@
+@if(boxSelected$ | async){
+<div class="selection-container">
+  @for (option of options$ | async; track option.id){
+  <app-option [option]="option"></app-option>
+  }
+</div>
+}
